@@ -1,0 +1,19 @@
+{
+  "name": "append-styles",
+  "version": "1.0.0",
+  "description": "Append CSS in a given order",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Sune Simonsen",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "19.0.2",
+    "unexpected": "10.26.3",
+    "unexpected-dom": "3.1.1"
+  }
+}
