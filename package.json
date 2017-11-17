@@ -1,6 +1,6 @@
 {
   "name": "append-styles",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Append CSS in a given order",
   "main": "index.js",
   "scripts": {
