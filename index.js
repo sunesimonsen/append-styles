@@ -10,7 +10,7 @@ function appendStyles(options) {
     throw new Error('You need to specify the id of the style element');
   }
 
-  var styleElement = document.getElementById(id) || createStyleElement(options);
+  var styleElement = createStyleElement(options);
 
   // strip potential UTF-8 BOM if css was read from a file
   if (css.charCodeAt(0) === 0xfeff) {
@@ -29,15 +29,17 @@ function appendStyles(options) {
 function createStyleElement(options) {
   var styleElement = document.createElement('style');
   styleElement.setAttribute('type', 'text/css');
-  styleElement.setAttribute('id', options.id);
+  styleElement.setAttribute('data-append-styles', options.id);
 
   var head = document.head
 
   var target = head.childNodes[0];
-  var before = options.before && document.getElementById(options.before);
-  var after = options.after && document.getElementById(options.after);
+  var before = options.before && document.querySelectorAll('[data-append-styles="' + options.before + '"]');
+  var after = options.after && document.querySelectorAll('[data-append-styles="' + options.after + '"]');
+  var startElement = before && before[0];
+  var endElement = after && after[after.length - 1];
 
-  target = before || (after && after.nextSibling) || target;
+  target = startElement || (endElement && endElement.nextSibling) || target;
 
   head.insertBefore(styleElement, target);
 
