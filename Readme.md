@@ -56,7 +56,7 @@ injected:
   <head>
     <style data-append-styles="module-a">body { background:blue; }</style>
     <style data-append-styles="module-a">h1 { color:papayawhip; }</style>
-    <style data-append-styles="module-b">body { background:red; }</style
+    <style data-append-styles="module-b">body { background:red; }</style>
     <style data-append-styles="module-b">h1 { color:black; }</style>
     ...
   </head>
