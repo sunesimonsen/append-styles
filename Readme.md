@@ -54,14 +54,10 @@ injected:
 ```html
 <html>
   <head>
-    <style type="text/css" id="module-a">
-      body { background:blue; }
-      h1 { color:papayawhip; }
-    </style>
-    <style type="text/css" id="module-b">
-      body { background:red; }
-      h1 { color:black; }
-    </style>
+    <style data-append-styles="module-a">body { background:blue; }</style>
+    <style data-append-styles="module-a">h1 { color:papayawhip; }</style>
+    <style data-append-styles="module-b">body { background:red; }</style
+    <style data-append-styles="module-b">h1 { color:black; }</style>
     ...
   </head>
   ...
@@ -73,8 +69,8 @@ injected:
 ## var styleElement = appendStyles(css, options);
 
 * `options.css` - the css to be appended.
-* `options.id` - the id of the script tag to append css to. The element will be created if it does not exist.
-* `options.before` - the id of a script tag that this script tag should be created before.
-* `options.after` - the id of a script tag that this script tag should be created after.
+* `options.id` - the append styles data id of the script tag to append css to. The element will be created if it does not exist.
+* `options.before` - the append styles data id of a script tag that this script tag should be created before.
+* `options.after` - the append styles data id of a script tag that this script tag should be created after.
 
 Notice that you have to specify either a `before` and `after`.

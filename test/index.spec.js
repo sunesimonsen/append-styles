@@ -58,8 +58,8 @@ describe('append-styles', function() {
     expect(document, 'to contain styles', [
       '<style data-append-styles="module-a">body { background:blue; }</style>',
       '<style data-append-styles="module-a">h1 { color:papayawhip; }</style>',
-      '<style data-append-styles="module-b">h1 { color:black; }</style>',
-      '<style data-append-styles="module-b">body { background:red; }</style>'
+      '<style data-append-styles="module-b">body { background:red; }</style>',
+      '<style data-append-styles="module-b">h1 { color:black; }</style>'
     ]);
   });
 });
