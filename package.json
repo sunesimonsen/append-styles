@@ -4,7 +4,9 @@
   "description": "Append CSS in a given order",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "changelog": "offline-github-changelog > CHANGELOG.md",
+    "postversion": "npm run changelog && git add CHANGELOG.md && git commit --allow-empty -m 'Update changelog'"
   },
   "keywords": [
     "css"
@@ -13,6 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "19.0.2",
+    "offline-github-changelog": "1.2.0",
     "unexpected": "10.26.3",
     "unexpected-dom": "3.1.1"
   }
