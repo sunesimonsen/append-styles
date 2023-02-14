@@ -23,8 +23,8 @@ function createStyleElement(options) {
   styleElement.setAttribute('type', 'text/css');
   styleElement.setAttribute('data-append-styles', id);
 
-  if (__webpack_nonce__) {
-    styleElement.nonce = __webpack_nonce__;
+  if (globalThis.__webpack_nonce__) {
+    styleElement.nonce = globalThis.__webpack_nonce__;
   }
 
   var head = document.head
