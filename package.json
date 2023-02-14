@@ -1,6 +1,6 @@
 {
   "name": "append-styles",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Append CSS in a given order",
   "bugs": "https://github.com/sunesimonsen/append-styles/issues",
   "repository": {
